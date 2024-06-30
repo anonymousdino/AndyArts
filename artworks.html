@@ -226,7 +226,7 @@
             <input type="text" placeholder="Enter name">
             <input type="email" placeholder="Enter email">
             <textarea rows="5" placeholder="Your comment"></textarea>
-            <button type="submit" class="hero-btn pink-btn" value="submit">Post Comment</button>
+            <button type="submit" class="hero-btn pink-btn">Post Comment</button>
         </form>
     </div>
 </section>
@@ -255,26 +255,6 @@
     function hideMenu(){
         navLinks.style.right = "-200px"; 
     }
-</script>
-<script>
-    <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $comment = $_POST['comment'];
-    
-    // Process the form data here, e.g., store in database
-    
-    // Redirect back to the form or show a success message
-    header("Location: index.html");
-    exit();
-} else {
-    // Handle other HTTP methods if necessary
-    http_response_code(405);
-    echo "Method Not Allowed";
-}
-?>
-
 </script>
 </body>
 </html>
